@@ -1,0 +1,78 @@
+{% extends '@DLGlobal/Backend/layoutBackend.html.twig' %}
+{% block content %}
+{% block body %}
+
+<div>
+    <center><h1>Tous les partenaires</h1></center>
+
+    <table class="table table-striped table-hover" align="center">
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Téléphone 1</th>
+                <th>Téliphone 2</th>
+                <th>Cin</th>
+                <th>Rib</th>
+                <th>Type de transfert</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for paginations in pagination %}
+            <tr>
+                <td><a href="{{ path('user_show', { 'id': paginations.id }) }}">{{ paginations.id }}</a></td>
+                <td>{{ paginations.lastName }}</td>
+                <td>{{ paginations.firstName }}</td>
+
+                <td>{{ paginations.phone }}</td>
+                <td>{{ paginations.mobilePhone }}</td>
+                <td>{{ paginations.cin }}</td>
+                <td>{{ paginations.rib }}</td>
+                <td>{{ paginations.transferType }}</td>
+                <td>
+
+                    <a href="{{ path('tree_view', { 'neud_id': paginations.id }) }}" class="btn btn-primary btn-xs">Arborescence</a>
+
+
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {#<ul>
+        <li>
+            <a href="{{ path('user_new') }}">Create a new paginations</a>
+        </li>
+    </ul>#}
+
+    {# total items count #}
+    <div class="count">
+        Le nombre total de partenaires : {{ pagination.getTotalItemCount }}
+    </div>
+    <table>
+       {# <tr>
+            #}{# sorting of properties based on query components #}{#
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
+            <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
+        </tr>
+
+        #}{# table body #}{#
+        {% for article in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ article.id }}</td>
+                <td>{{ article.username }}</td>
+            </tr>
+        {% endfor %}#}
+    </table>
+    {# display navigation #}
+    <div class="pagination-sm" >
+        {{ knp_pagination_render(pagination) }}
+    </div>
+{% endblock %}
+{% endblock content %}

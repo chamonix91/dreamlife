@@ -1,0 +1,18 @@
+{% extends '@DLGlobal/FrontEnd/layoutFront.html.twig' %}
+
+{% block banner %}
+{% endblock banner %}
+{% block content %}
+<div align="center">
+    <center><h3>Votre compte est validé</h3></center>
+    <br>
+
+    <p>Bienvenue {{ app.user.firstName }} {{ app.user.firstName }} vous êtes inscrit avec votre E-mail {{ app.user.email }}</p>
+    {% if targetUrl %}
+    <p><a href="{{ path('user_index') }}">Aller vers la page d'accueil</a></p>
+    {% endif %}
+    <bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR>
+
+
+</div>
+{% endblock content %}

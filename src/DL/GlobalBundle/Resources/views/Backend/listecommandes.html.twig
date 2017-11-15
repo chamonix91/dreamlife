@@ -1,0 +1,57 @@
+{% extends '@DLGlobal/Backend/layoutBackend.html.twig' %}
+{% block content %}
+
+    {% block body %}
+        <div>
+
+    <table class="table table-striped table-hover" align="center">
+    <thead>
+    <tr>
+
+        <th>Identifiant</th>
+        <th>CIN</th>
+        <th>Rib </th>
+        <th>Email</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date d'inscription</th>
+        <th>Action</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+
+
+{% for p in actives %}
+<tr>
+    <td>{{ p.id }}</td>
+    <td>{{ p.cin }}</td>
+    <td>{{ p.rib }}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.lastName }}</td>
+    <td>{{ p.firstName }}</td>
+    <td>{{ p.createdAt|date ('Y,m,D') }}</td>
+
+
+
+
+    <td>
+        <ul>
+            <li><a href="{{ path('show_commande', { 'ids': p.id }) }}" class="btn btn-primary btn-xs">Afficher commande</a></li><br>
+
+            <li><a href="{{ path('activerPartner', { 'ids': p.id }) }}" class="btn btn-primary btn-xs">Activer Partenaire</a></li>
+
+        </ul>
+    </td>
+
+
+<tr>
+{% endfor %}
+    </tbody>
+    </table>
+        </div>
+    {% endblock body %}
+
+{% endblock content %}

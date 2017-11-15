@@ -1,0 +1,293 @@
+{% extends '@DLGlobal/FrontEnd/layoutFront.html.twig' %}
+{% block banner %}
+    <div class="breadcrumb-container">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home pr-10"></i><a href="../index.html">Acceuil</a></li>
+                <li><i class="fa fa-product-hunt pr-10"></i><a href="../product-list.html">Produits</a></li>
+                <li class="active">Kit Dreamlife J2</li>
+            </ol>
+        </div>
+    </div><!-- breadcrumb end -->
+{% endblock banner %}
+    {% block content %}
+    <section class="section light-gray-bg clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="main col-md-9"><h1 class="page-title">Produits</h1>
+                    <p class="lead"></p>
+                    <div class="separator-2"></div>
+                    <nav aria-label="Page navigation">
+                        <uL class="pagination">
+                            <li class="prev disabled"><a href="#"><</a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li class="next disabled"><a href="#">></a></li>
+                        </uL>
+                    </nav>
+                </div>
+                <aside class="col-md-3"><h4 class="page-title">Trouver un produit rapidement</h4>
+                    <div class="separator-2"></div>
+                    <div class="sidebar">
+                        <div class="block clearfix">
+                            <form action="http://www.dreamlife.com.tn/product-list" method="post" role="search">
+                                <div class="form-group has-feedback"><input type="text" id="events_bundle_search_search"
+                                                                            name="events_bundle_search[search]"
+                                                                            required="required" class="form-control"
+                                                                            placeholder="Rechercher un évènement..."/><input
+                                            type="hidden" id="events_bundle_search__token"
+                                            name="events_bundle_search[_token]"
+                                            value="XouqcMXnWbcGFu-WchQVsommTiQ24CPh_LQrBo3MoZ0"/><i
+                                            class="fa fa-search form-control-feedback"></i></div>
+                                <a href="event.html" class="btn radius-50 btn-gray-transparent btn-sm">Réinitialiser</a><input
+                                        value="Rechercher..." type="submit" class="btn radius-50 btn-default btn-sm">
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-md-12">
+                    <div class="clear-style">
+                        <div class="row masonry-grid-fitrows grid-space-10">
+                            <div class="col-md-4 col-sm-6 masonry-grid-item item thumbnail"><a
+                                        href="{{ path('produit2') }}" class="figure"><img
+                                            src="media/cache/productthumb/uploads/products/files/79d9865b1fe03520ba107da89efd692df5544338.png"
+                                            alt="Kit DreamLife Z1 Plus"/></a></a>
+                                <div class="caption">
+                                    <div class="price">1 100 DT</div>
+                                    <a href="{{ path('produit2') }}">Kit DreamLife Z1 Plus</a></div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 masonry-grid-item item thumbnail"><a
+                                        href="{{ path('produit1') }}" class="figure"><img
+                                            src="media/cache/productthumb/uploads/products/files/606b72dbe5ca42333fa34cc4d8e297e87bf95bcc.png"
+                                            alt="Kit DreamLife J2"/></a></a>
+                                <div class="caption">
+                                    <div class="price">350 DT</div>
+                                    <a href="{{ path('produit1') }}">Kit DreamLife J2</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- main-container start --><!-- ================ -->
+    <section id="documents-list" class="main-container"><!-- section start --><!-- ================ -->
+        <section class="section light-gray-bg clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <div class="row">
+                                <div class="col-sm-8"><h1 class="title">Inscription</h1></div>
+                                <div class="col-sm-4"><br>
+                                    <p><a target="_blank"
+                                          href="uploads/media/documents/6a00c23cc626641c19acfb06aad67894d02ece49.pdf"
+                                          class="btn btn-lg btn-default btn-animated">Télécharger<i
+                                                    class="fa fa-download pl-20"></i></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- section end --><br><!-- section start --><!-- ================ -->
+        <section class="section light-gray-bg clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <div class="row">
+                                <div class="col-sm-8"><h1 class="title">Demande Produit</h1></div>
+                                <div class="col-sm-4"><br>
+                                    <p><a target="_blank"
+                                          href="uploads/media/documents/19948f7c88dcab4217517dbb1b95e371f50ef39d.png"
+                                          class="btn btn-lg btn-default btn-animated">Télécharger<i
+                                                    class="fa fa-download pl-20"></i></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- section end --><br><!-- section start --><!-- ================ -->
+        <section class="section light-gray-bg clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <div class="row">
+                                <div class="col-sm-8"><h1 class="title">Rib Bancaire Biat</h1></div>
+                                <div class="col-sm-4"><br>
+                                    <p><a target="_blank"
+                                          href="uploads/media/documents/2fff1e588f43dbbdc695b8d88247f1283526c2a7.pdf"
+                                          class="btn btn-lg btn-default btn-animated">Télécharger<i
+                                                    class="fa fa-download pl-20"></i></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- section end --><br><!-- section start --><!-- ================ -->
+        <section class="section light-gray-bg clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <div class="row">
+                                <div class="col-sm-8"><h1 class="title">Rib Bancaire Bna</h1></div>
+                                <div class="col-sm-4"><br>
+                                    <p><a target="_blank"
+                                          href="uploads/media/documents/8d1bc3b9d5edb2f87514705f8ef5174df0080d2e.pdf"
+                                          class="btn btn-lg btn-default btn-animated">Télécharger<i
+                                                    class="fa fa-download pl-20"></i></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- section end --><br><!-- section start --><!-- ================ -->
+        <section class="section light-gray-bg clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="call-to-action text-center">
+                            <div class="row">
+                                <div class="col-sm-8"><h1 class="title">Termes &amp; Conditions D&#039;achat</h1></div>
+                                <div class="col-sm-4"><br>
+                                    <p><a target="_blank"
+                                          href="uploads/media/documents/1d0fb604d94de48198ba12eb3fb37ce679c80e42.pdf"
+                                          class="btn btn-lg btn-default btn-animated">Télécharger<i
+                                                    class="fa fa-download pl-20"></i></a></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- section end --><br></section>{% endblock content%}
+
+{% block footer %}
+    <!-- footer start (Add "dark" class to #footer in order to enable dark footer) --><!-- ================ -->
+    <footer id="footer" class="clearfix dark"><!-- .footer start --><!-- ================ -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="footer-content text-center padding-ver-clear">
+                                <div class="logo-footer"><img id="logo-footer" class="center-block"
+                                                              src="media/cache/logo/logo.png" alt="Dream Life"></div>
+                                <p>Dream Life le créateur de richesse! Dream Life vous aide à atteindre votre liberté
+                                    financière et transformer vos rêves en réalités. Dream Life est une société..</p>
+                                <ul class="list-inline mb-20">
+                                    <li><i class="text-default fa fa-map-marker pr-5"></i> 15 Rue Ali ibn Abi taleb 2000
+                                        Bardo Tunis
+
+                                        </i></li>
+                                    <li><a href="tel: (+216) 71 518 155" class="link-dark"><i
+                                                    class="text-default fa fa-phone pl-10 pr-5"></i> (+216) 71 518
+                                            155</a></li>
+                                    <li><i class="fa fa-envelope pr-10"></i><a
+                                                href="index.html">network_dreamlife@dreamlife.com.tn </a></li>
+                                </ul>
+                                <div class="separator"></div>
+                                <p class="text-center margin-clear">Copyright © 2017 <a target="_blank"
+                                                                                        href="../trimakus.com/index.html">Trimakus</a>.
+                                    All Rights Reserved</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .footer end --></footer><!-- footer end --></div><!-- page-wrapper end -->
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== --><!-- Jquery and Bootstap core js files -->
+{% endblock footer %}
+
+{% block javascript %}
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="bundles/front/dreamlife/bootstrap/js/bootstrap.min.js"></script>
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/modernizr.js"></script>
+<script type="text/javascript"
+        src="bundles/front/dreamlife/plugins/rs-plugin-5/js/jquery.themepunch.tools.min838f838f.js?rev=5.0"></script>
+<script type="text/javascript"
+        src="bundles/front/dreamlife/plugins/rs-plugin-5/js/jquery.themepunch.revolution.min838f838f.js?rev=5.0"></script>
+<!-- Isotope javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/isotope/isotope.pkgd.min.js"></script>
+<!-- Magnific Popup javascript -->
+<script type="text/javascript"
+        src="bundles/front/dreamlife/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!-- Appear javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/waypoints/jquery.waypoints.min.js"></script>
+<!-- Count To javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/jquery.countTo.js"></script>
+<!-- Parallax javascript -->
+<script src="bundles/front/dreamlife/plugins/jquery.parallax-1.1.3.js"></script><!-- Contact form -->
+<script src="bundles/front/dreamlife/plugins/jquery.validate.js"></script><!-- Background Video -->
+<!-- Owl carousel javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/owlcarousel2/owl.carousel.min.js"></script>
+<!-- SmoothScroll javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/jquery.browser.js"></script>
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/SmoothScroll.js"></script>
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="bundles/front/dreamlife/js/template.js"></script><!-- Custom Scripts -->
+<script type="text/javascript" src="bundles/front/dreamlife/js/custom.js"></script>
+<!-- Color Switcher (Remove these lines) --><!-- Pace javascript -->
+<script type="text/javascript" src="bundles/front/dreamlife/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="front/plugins/idangerous-swiper/dist/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" async defer>
+    var loaderGif = 'img/loading.gif';
+    var validateBtn = "Envoyer";
+    var messageSuccessContact = 'Message - 1001';
+    var locale = "fr";
+    var currency = "DT";
+    // Format numbers (Money)
+    Number.prototype.formatMoney = function (c, d, t) {
+        var n = this,
+                c = isNaN(c = Math.abs(c)) ? 2 : c,
+                d = d == undefined ? "." : d,
+                t = t == undefined ? "," : t,
+                s = n < 0 ? "-" : "",
+                i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    };
+    function submitForm(form) {
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: form.serializeArray(),
+            dataType: "json",
+            beforeSend: function () {
+                blockPage()
+                $('.form.text-danger').remove();
+            },
+            success: function (response) {
+                if (response.success) {
+                    window.location.href = response.url;
+                } else {
+                    $.each(response.errors, function (index, value) {
+                        $('#' + index).parent().append('<span class="form text-danger">' + value + '</span>');
+                    })
+                }
+                unblockPage()
+            },
+            error: function () {
+                unblockPage()
+            }
+        });
+    }
+    function blockPage() {
+        $('body').addClass('pace-running');
+        $('body').removeClass('pace-done');
+        $('.pace').addClass('pace-active');
+        $('.pace').removeClass('pace-inactive');
+    }
+    function unblockPage() {
+        $('body').removeClass('pace-running');
+        $('body').addClass('pace-done');
+        $('.pace').removeClass('pace-active');
+        $('.pace').addClass('pace-inactive');
+    }
+</script>
+<script type="text/javascript" src="front/plugins/html5_gallery_free/html5gallery/html5gallery.js"
+        async defer></script><!-- Color Switcher (Remove these lines) --></body>
+<!-- Mirrored from htmlcoder.me/preview/the_project/v.1.4/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Mar 2017 10:42:20 GMT -->
+<!-- Mirrored from www.dreamlife.com.tn/product-list by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2017 14:34:22 GMT -->
+
+{% endblock javascript %}

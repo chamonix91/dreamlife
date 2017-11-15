@@ -1,0 +1,26 @@
+{% extends "@DLGlobal/FrontEnd/layoutFront.html.twig" %}
+
+{% block banner %}
+{% endblock banner %}
+
+
+{% block content %}
+
+
+
+
+
+    {{ form_start(form) }}
+
+{{ form_widget(form) }}
+
+
+{{ form_end(form) }}
+    <div class="alert alert-dismissible alert-success" align="center">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Félicitation!</strong> Vous avez bien passer votre commande ..
+    </div>
+
+
+    <br><br><br><br><br><br><br><br>
+{% endblock content %}

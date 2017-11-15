@@ -1,0 +1,66 @@
+{% extends '@DLGlobal/FrontEnd/layoutFront.html.twig' %}
+
+{% block banner %}
+{% endblock banner %}
+
+
+{% block content %}
+
+
+    <div class="row" >
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6">
+
+            <br><br><br><br><br>
+            <table class="table table-striped table-hover ">
+                <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Quantité</th>
+                    <th>Total TTC</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>KIT DREAMLIFE Z1 PLUS</td>
+                    <td>1</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right" >Total</td>
+                    <td>932.61 Dt</td>
+
+                </tr>
+                <tr class="info">
+                    <td></td>
+                    <td align="right">Participation aux frais de port HT</td>
+                    <td>0.00 Dt</td>
+
+                </tr>
+                <tr class="success">
+                    <td></td>
+                    <td align="right">Total TTC</td>
+                    <td>1100.50 Dt</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+            <a href="{{ path('ValidationP2') }}"><input type="button" value="Commander"></a>
+            <br><br><br><br><br>
+
+        </div>
+
+        <div class="col-sm-3"></div>
+    </div>
+{% endblock content %}

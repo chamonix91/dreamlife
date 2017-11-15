@@ -1,0 +1,24 @@
+Partner_index:
+    path:     /
+    defaults: { _controller: "DLGlobalBundle:DreamlifePartnerPartner:index" }
+    methods:  GET
+
+Partner_show:
+    path:     /{uid}/show
+    defaults: { _controller: "DLGlobalBundle:DreamlifePartnerPartner:show" }
+    methods:  GET
+
+Partner_new:
+    path:     /new
+    defaults: { _controller: "DLGlobalBundle:DreamlifePartnerPartner:new" }
+    methods:  [GET, POST]
+
+Partner_edit:
+    path:     /{uid}/edit
+    defaults: { _controller: "DLGlobalBundle:DreamlifePartnerPartner:edit" }
+    methods:  [GET, POST]
+
+Partner_delete:
+    path:     /{uid}/delete
+    defaults: { _controller: "DLGlobalBundle:DreamlifePartnerPartner:delete" }
+    methods:  DELETE

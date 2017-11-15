@@ -1,0 +1,50 @@
+{% extends '@DLGlobal/Backend/layoutBackend.html.twig' %}
+{% block content %}
+
+
+{% block body %}
+    <div>
+    <center><h1>Tous les partenaires</h1></center>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+
+                <th>Uid</th>
+                <th>Useruid</th>
+                <th>Treeparentid</th>
+                <th>Enrollerid</th>
+                <th>Treeposition</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for dreamlifePartnerPartner in dreamlifePartnerPartners %}
+            <tr>
+                <td><a href="{{ path('Partner_show', { 'uid': dreamlifePartnerPartner.uid }) }}">{{ dreamlifePartnerPartner.uid }}</a></td>
+                <td>{{ dreamlifePartnerPartner.userUid }}</td>
+                <td>{{ dreamlifePartnerPartner.treeParentId }}</td>
+                <td>{{ dreamlifePartnerPartner.enrollerId }}</td>
+                <td>{{ dreamlifePartnerPartner.treePosition }}</td>
+
+                {#<td>{% if dreamlifePartnerPartner.isPlaced %}Yes{% else %}No{% endif %}</td>#}
+                <td>
+
+                            <a href="{{ path('Partner_show', { 'uid': dreamlifePartnerPartner.uid }) }}" class="btn btn-primary btn-xs">Détails</a>
+
+                            <a href="{{ path('Partner_edit', { 'uid': dreamlifePartnerPartner.uid }) }}" class="btn btn-primary btn-xs">Modifier</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('Partner_new') }}">Create a new dreamlifePartnerPartner</a>
+        </li>
+    </ul>
+    </div>
+{% endblock %}
+{% endblock content %}

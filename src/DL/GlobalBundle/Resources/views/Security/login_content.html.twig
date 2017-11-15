@@ -1,0 +1,88 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{#{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" />
+
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</form>#}
+
+<html lang="en">
+<head>
+    <title>Login Dream Life</title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Jolly Login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Meta tags -->
+
+
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="{{ asset ('login/css/font-awesome.min.css') }}" />
+
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="{{ asset ('login/css/style.css') }}" rel='stylesheet' type='text/css' media="all">
+    <!--//style sheet end here-->
+
+    <link href="{{ asset ('login/fonts.googleapis.com/css?family=Poiret+One') }}" rel="stylesheet">
+
+</head>
+<body>
+<div align="left">
+<img src="{{ asset('login/images/logo.png') }}" height="100" width="300">
+</div>
+<div class="main-w3">
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+
+        {% if csrf_token %}
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+        {% endif %}
+
+        <h2><span class="fa fa-user t-w3" aria-hidden="true"></span></h2>
+        <div class="login-w3ls">
+            <div class="icons">
+
+                <input type="email" id="username" name="_username" value="{{ last_username }}" placeholder="Email" required="">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="icons">
+
+                <input type="password" id="password" name="_password" placeholder="Password" required="">
+                <span class="fa fa-key" aria-hidden="true"></span>
+                <div class="clear"></div>
+            </div>
+            <div class="btnn">
+                <input type="checkbox" class="checked"><span class="span">Remember me..?</span><br>
+                <button type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}">Login</button><br>
+                <a href="{{ path('fos_user_resetting_request') }}" class="for" target="_blank">Forgot password...?</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+{#<div class="copy">
+    <p>&copy;2017 Jolly Login Form. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+</div>#}
+</body>
+</html>

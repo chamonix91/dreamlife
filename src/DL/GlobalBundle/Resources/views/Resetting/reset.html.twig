@@ -1,0 +1,10 @@
+{% extends "@DLGlobal/FrontEnd/layoutFront.html.twig" %}
+
+{% block banner %}
+{% endblock banner %}
+
+{% block content %}
+{% block fos_user_content %}
+{% include "@FOSUser/Resetting/reset_content.html.twig" %}
+{% endblock fos_user_content %}
+{% endblock content %}

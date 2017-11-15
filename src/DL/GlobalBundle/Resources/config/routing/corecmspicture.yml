@@ -1,0 +1,24 @@
+Picture_index:
+    path:     /
+    defaults: { _controller: "DLGlobalBundle:CoreCmsPicture:index" }
+    methods:  GET
+
+Picture_show:
+    path:     /{uid}/show
+    defaults: { _controller: "DLGlobalBundle:CoreCmsPicture:show" }
+    methods:  GET
+
+Picture_new:
+    path:     /new
+    defaults: { _controller: "DLGlobalBundle:CoreCmsPicture:new" }
+    methods:  [GET, POST]
+
+Picture_edit:
+    path:     /{uid}/edit
+    defaults: { _controller: "DLGlobalBundle:CoreCmsPicture:edit" }
+    methods:  [GET, POST]
+
+Picture_delete:
+    path:     /{uid}/delete
+    defaults: { _controller: "DLGlobalBundle:CoreCmsPicture:delete" }
+    methods:  DELETE

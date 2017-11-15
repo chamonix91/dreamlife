@@ -1,0 +1,14 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div align="center">
+<p>
+{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+</p>
+        <br><br><br>
+        <img src="{{ asset('login/images/logo.png') }}" height="100" width="300">
+
+    </div>
+{% endblock %}

@@ -1,0 +1,111 @@
+dl_global_user:
+    resource: "@DLGlobalBundle/Resources/config/routing/coreuseruser.yml"
+    prefix:   /admin/user
+
+dl_global_address:
+    resource: "@DLGlobalBundle/Resources/config/routing/corecustomeraddress.yml"
+    prefix:   /address
+
+dl_global_Partner:
+    resource: "@DLGlobalBundle/Resources/config/routing/dreamlifepartnerpartner.yml"
+    prefix:   admin/Partner
+
+dl_global_homepage:
+    path:     /
+    defaults: { _controller: DLGlobalBundle:Default:index }
+
+dashboard:
+    path:     /admin/
+    defaults: { _controller: DLGlobalBundle:Admin:home }
+
+home:
+    path:     /index
+    defaults: { _controller: DLGlobalBundle:Utilisateur:home }
+
+
+UserAccueil:
+    path:     /user/dashboard
+    defaults: { _controller: DLGlobalBundle:Utilisateur:index }
+
+
+testform:
+    path:     /testform
+    defaults: { _controller: DLGlobalBundle:Default:index }
+
+Addpartner:
+    path:     /addpartner
+    defaults: { _controller: DLGlobalBundle:AddPartner:register }
+
+
+newPartner:
+    path: /admin/newpartner
+    defaults: {_controller: DLGlobalBundle:Admin:newPartner}
+
+produit1:
+    path: /kit-dreamlife-j2
+    defaults: {_controller: DLGlobalBundle:Produit:produit1}
+
+produit2:
+    path: /kit-dreamlife-z1-plus
+    defaults: {_controller: DLGlobalBundle:Produit:produit2}
+
+events:
+    path: /event
+    defaults: {_controller: DLGlobalBundle:Utilisateur:events}
+
+
+commandeP1:
+    path: /produit/commandeJ2
+    defaults: {_controller: DLGlobalBundle:Utilisateur:commanderProduit1}
+
+commandeP2:
+    path: /produit/commandeZ1
+    defaults: {_controller: DLGlobalBundle:Utilisateur:commanderProduit2}
+
+
+saleconfirmed:
+    path: /saleconfirmed
+    defaults: {_controller: DLGlobalBundle:U}
+
+listecommandes:
+    path: admin/commandes/list
+    defaults: {_controller: DLGlobalBundle:Admin:inactivePartner}
+
+activerPartner:
+    path: admin/activerPartner/{ids}
+    defaults: {_controller: DLGlobalBundle:Admin:activerPartner}
+
+show_commande:
+    path: admin/showcommande/{ids}
+    defaults: {_controller: DLGlobalBundle:Admin:showcommande}
+
+my_app_tree:
+    resource: "@DLGlobalBundle/Resources/config/routing/tree.yml"
+    prefix:   /user
+my_earned_user:
+    resource: "@DLGlobalBundle/Resources/config/routing/earned.yml"
+    prefix:   /admin
+my_tree:
+    path: profile/mytree/{neud_id}
+    defaults: {_controller: DLGlobalBundle:Tree:Treemy}
+
+confirmation_inscri:
+    path: /validationCompte
+    defaults: {_controller: DLGlobalBundle:Utilisateur:validationCompte}
+
+
+AllProducts:
+    path: /product-list
+    defaults: {_controller: DLGlobalBundle:Utilisateur:allproducts}
+
+conditionDL:
+    path: /conditionsDL
+    defaults: {_controller: DLGlobalBundle:Utilisateur:allproducts}
+
+ValidationP1:
+    path: /ValidationP1
+    defaults: {_controller: DLGlobalBundle:Utilisateur:ValidationProduit1}
+
+ValidationP2:
+    path: /ValidationP2
+    defaults: {_controller: DLGlobalBundle:Utilisateur:ValidationProduit1}

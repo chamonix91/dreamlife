@@ -1,0 +1,202 @@
+{% extends '@DLGlobal/Backend/layoutBackend.html.twig' %}
+{% block content%}
+{% block body %}
+    <center><h1>Les informations de {{ coreUserUser.firstName }} {{ coreUserUser.lastName }}</h1></center>
+
+    <table class="table table-striped table-hover" align="center">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ coreUserUser.id }}</td>
+            </tr>
+            <tr>
+                <th>Addressid</th>
+                <td>{{ coreUserUser.addressId }}</td>
+            </tr>
+            <tr>
+                <th>Pictureid</th>
+                <td>{{ coreUserUser.pictureId }}</td>
+            </tr>
+            <tr>
+                <th>Recruiterid</th>
+                <td>{{ coreUserUser.recruiterId }}</td>
+            </tr>
+            <tr>
+                <th>Deleted</th>
+                <td>{% if coreUserUser.deleted %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedat</th>
+                <td>{% if coreUserUser.deletedAt %}{{ coreUserUser.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{{ coreUserUser.createdAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if coreUserUser.updatedAt %}{{ coreUserUser.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tmppassword</th>
+                <td>{{ coreUserUser.tmpPassword }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ coreUserUser.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ coreUserUser.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ coreUserUser.phone }}</td>
+            </tr>
+            <tr>
+                <th>Mobilephone</th>
+                <td>{{ coreUserUser.mobilePhone }}</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>{{ coreUserUser.nationality }}</td>
+            </tr>
+            <tr>
+                <th>Rolelabel</th>
+                <td>{{ coreUserUser.roleLabel }}</td>
+            </tr>
+            <tr>
+                <th>Locale</th>
+                <td>{{ coreUserUser.locale }}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{ coreUserUser.gender }}</td>
+            </tr>
+            <tr>
+                <th>Expired</th>
+                <td>{% if coreUserUser.expired %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Locked</th>
+                <td>{% if coreUserUser.locked %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Credentialsexpired</th>
+                <td>{% if coreUserUser.credentialsExpired %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Validatedate</th>
+                <td>{% if coreUserUser.validateDate %}{{ coreUserUser.validateDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Phonevalidated</th>
+                <td>{% if coreUserUser.phoneValidated %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Phonecode</th>
+                <td>{{ coreUserUser.phoneCode }}</td>
+            </tr>
+            <tr>
+                <th>Phonerequestat</th>
+                <td>{% if coreUserUser.phoneRequestAt %}{{ coreUserUser.phoneRequestAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Randomkey</th>
+                <td>{{ coreUserUser.randomKey }}</td>
+            </tr>
+            <tr>
+                <th>Commercialname</th>
+                <td>{{ coreUserUser.commercialName }}</td>
+            </tr>
+            <tr>
+                <th>Birthdate</th>
+                <td>{% if coreUserUser.birthDate %}{{ coreUserUser.birthDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ coreUserUser.country }}</td>
+            </tr>
+            <tr>
+                <th>Documenttype</th>
+                <td>{{ coreUserUser.documentType }}</td>
+            </tr>
+            <tr>
+                <th>Documentnumber</th>
+                <td>{{ coreUserUser.documentNumber }}</td>
+            </tr>
+            <tr>
+                <th>Cin</th>
+                <td>{{ coreUserUser.cin }}</td>
+            </tr>
+            <tr>
+                <th>Rib</th>
+                <td>{{ coreUserUser.rib }}</td>
+            </tr>
+            <tr>
+                <th>Transfertype</th>
+                <td>{{ coreUserUser.transferType }}</td>
+            </tr>
+            <tr>
+                <th>Promotioncode</th>
+                <td>{{ coreUserUser.promotionCode }}</td>
+            </tr>
+            <tr>
+                <th>Chosentreedirection</th>
+                <td>{{ coreUserUser.chosenTreeDirection }}</td>
+            </tr>
+            <tr>
+                <th>Lasttreedirection</th>
+                <td>{{ coreUserUser.lastTreeDirection }}</td>
+            </tr>
+            <tr>
+                <th>Siret</th>
+                <td>{{ coreUserUser.siret }}</td>
+            </tr>
+            <tr>
+                <th>Joinedat</th>
+                <td>{% if coreUserUser.joinedAt %}{{ coreUserUser.joinedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Iban</th>
+                <td>{{ coreUserUser.iban }}</td>
+            </tr>
+            <tr>
+                <th>Document</th>
+                <td><img src="{{asset ('media/uploads/img/'~ coreUserUser.document)}}" alt="Slide Image"class="img-rounded" alt="Cinque Terre"  /></td>
+                <td>{{ coreUserUser.document }}</td>
+            </tr>
+            <tr>
+                <th>Ribdocument</th>
+                <td>{{ coreUserUser.ribDocument }}</td>
+            </tr>
+            <tr>
+                <th>Invalidemail</th>
+                <td>{{ coreUserUser.invalidEmail }}</td>
+            </tr>
+            <tr>
+                <th>Active</th>
+                <td>{% if coreUserUser.active %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Checkstatus</th>
+                <td>{{ coreUserUser.checkStatus }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('user_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('user_edit', { 'id': coreUserUser.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
+{% endblock content %}

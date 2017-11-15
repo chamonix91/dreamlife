@@ -1,0 +1,24 @@
+address_index:
+    path:     /
+    defaults: { _controller: "DLGlobalBundle:CoreCustomerAddress:index" }
+    methods:  GET
+
+address_show:
+    path:     /{uid}/show
+    defaults: { _controller: "DLGlobalBundle:CoreCustomerAddress:show" }
+    methods:  GET
+
+address_new:
+    path:     /new
+    defaults: { _controller: "DLGlobalBundle:CoreCustomerAddress:new" }
+    methods:  [GET, POST]
+
+address_edit:
+    path:     /{uid}/edit
+    defaults: { _controller: "DLGlobalBundle:CoreCustomerAddress:edit" }
+    methods:  [GET, POST]
+
+address_delete:
+    path:     /{uid}/delete
+    defaults: { _controller: "DLGlobalBundle:CoreCustomerAddress:delete" }
+    methods:  DELETE

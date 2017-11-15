@@ -1,0 +1,20 @@
+{% extends '@DLGlobal/FrontEnd/layoutFront.html.twig' %}
+{% block banner %}
+{% endblock banner %}
+{% block content %}
+
+    <center><h3>Validation du compte</h3></center>
+    <center><h6>Veuillez renseigner les informations demandées pour valider votre compte. </h6></center>
+<div align="center">
+    {{ form_start(form) }}
+
+    {{ form_widget(form.documentFile) }}<br>
+    {{ form_widget(form.ribDocumentFile) }}
+    <input type="submit" value="Valider">
+
+    {{ form_end(form) }}
+</div>
+
+    <bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR><bR>
+
+{% endblock content %}

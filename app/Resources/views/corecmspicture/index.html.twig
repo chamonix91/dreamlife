@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Corecmspictures list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Uid</th>
+                <th>Deleted</th>
+                <th>Deletedat</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Alt</th>
+                <th>Extension</th>
+                <th>Webpath</th>
+                <th>Randomkey</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coreCmsPicture in coreCmsPictures %}
+            <tr>
+                <td><a href="{{ path('Picture_show', { 'uid': coreCmsPicture.uid }) }}">{{ coreCmsPicture.uid }}</a></td>
+                <td>{% if coreCmsPicture.deleted %}Yes{% else %}No{% endif %}</td>
+                <td>{% if coreCmsPicture.deletedAt %}{{ coreCmsPicture.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if coreCmsPicture.createdAt %}{{ coreCmsPicture.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if coreCmsPicture.updatedAt %}{{ coreCmsPicture.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ coreCmsPicture.alt }}</td>
+                <td>{{ coreCmsPicture.extension }}</td>
+                <td>{{ coreCmsPicture.webpath }}</td>
+                <td>{{ coreCmsPicture.randomKey }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('Picture_show', { 'uid': coreCmsPicture.uid }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('Picture_edit', { 'uid': coreCmsPicture.uid }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('Picture_new') }}">Create a new coreCmsPicture</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends '@DLGlobal/Backend/layoutBackend.html.twig' %}
+
+
+
+{% block content %}
+    {% block body %}
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1>Dreamlifepartnerpartner</h1>
+                    </div>
+                    <div class="panel-body">
+                        <center>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Uid</th>
+                                <td>{{ dreamlifePartnerPartner.uid }}</td>
+                            </tr>
+                            <tr>
+                                <th>Useruid</th>
+                                <td>{{ dreamlifePartnerPartner.userUid }}</td>
+                            </tr>
+                            <tr>
+                                <th>Treeparentid</th>
+                                <td>{{ dreamlifePartnerPartner.treeParentId }}</td>
+                            </tr>
+                            <tr>
+                                <th>Enrollerid</th>
+                                <td>{{ dreamlifePartnerPartner.enrollerId }}</td>
+                            </tr>
+                            <tr>
+                                <th>Packid</th>
+                                <td>{{ dreamlifePartnerPartner.packId }}</td>
+                            </tr>
+                            <tr>
+                                <th>Deleted</th>
+                                <td>{% if dreamlifePartnerPartner.deleted %}Yes{% else %}No{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Deletedat</th>
+                                <td>{% if dreamlifePartnerPartner.deletedAt %}{{ dreamlifePartnerPartner.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Createdat</th>
+                                <td>{% if dreamlifePartnerPartner.createdAt %}{{ dreamlifePartnerPartner.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Updatedat</th>
+                                <td>{% if dreamlifePartnerPartner.updatedAt %}{{ dreamlifePartnerPartner.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Packcode</th>
+                                <td>{{ dreamlifePartnerPartner.packCode }}</td>
+                            </tr>
+                            <tr>
+                                <th>Validatedateforuser</th>
+                                <td>{% if dreamlifePartnerPartner.validateDateForUser %}{{ dreamlifePartnerPartner.validateDateForUser|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Code</th>
+                                <td>{{ dreamlifePartnerPartner.code }}</td>
+                            </tr>
+                            <tr>
+                                <th>Treedepth</th>
+                                <td>{{ dreamlifePartnerPartner.treeDepth }}</td>
+                            </tr>
+                            <tr>
+                                <th>Treeposition</th>
+                                <td>{{ dreamlifePartnerPartner.treePosition }}</td>
+                            </tr>
+                            <tr>
+                                <th>Parentcode</th>
+                                <td>{{ dreamlifePartnerPartner.parentCode }}</td>
+                            </tr>
+                            <tr>
+                                <th>Qualification</th>
+                                <td>{{ dreamlifePartnerPartner.qualification }}</td>
+                            </tr>
+                            <tr>
+                                <th>Isplaced</th>
+                                <td>{% if dreamlifePartnerPartner.isPlaced %}Yes{% else %}No{% endif %}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </center>
+
+                        <ul>
+                            <li>
+                                <a href="{{ path('Partner_index') }}">Retourner à la liste</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('Partner_edit', { 'uid': dreamlifePartnerPartner.uid }) }}">Modifier</a>
+                            </li>
+                            <li>
+                                {{ form_start(delete_form) }}
+                                <input type="submit" value="Delete">
+                                {{ form_end(delete_form) }}
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    {% endblock body %}
+{% endblock content %}

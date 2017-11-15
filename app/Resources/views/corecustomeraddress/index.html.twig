@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Corecustomeraddresses list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Uid</th>
+                <th>Deleted</th>
+                <th>Deletedat</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Street</th>
+                <th>Complement</th>
+                <th>Postalcode</th>
+                <th>City</th>
+                <th>Region</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coreCustomerAddress in coreCustomerAddresses %}
+            <tr>
+                <td><a href="{{ path('address_show', { 'uid': coreCustomerAddress.uid }) }}">{{ coreCustomerAddress.uid }}</a></td>
+                <td>{% if coreCustomerAddress.deleted %}Yes{% else %}No{% endif %}</td>
+                <td>{% if coreCustomerAddress.deletedAt %}{{ coreCustomerAddress.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if coreCustomerAddress.createdAt %}{{ coreCustomerAddress.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if coreCustomerAddress.updatedAt %}{{ coreCustomerAddress.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ coreCustomerAddress.street }}</td>
+                <td>{{ coreCustomerAddress.complement }}</td>
+                <td>{{ coreCustomerAddress.postalCode }}</td>
+                <td>{{ coreCustomerAddress.city }}</td>
+                <td>{{ coreCustomerAddress.region }}</td>
+                <td>{{ coreCustomerAddress.country }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('address_show', { 'uid': coreCustomerAddress.uid }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('address_edit', { 'uid': coreCustomerAddress.uid }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('address_new') }}">Create a new coreCustomerAddress</a>
+        </li>
+    </ul>
+{% endblock %}

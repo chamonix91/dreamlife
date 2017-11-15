@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Corecmspicture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Uid</th>
+                <td>{{ coreCmsPicture.uid }}</td>
+            </tr>
+            <tr>
+                <th>Deleted</th>
+                <td>{% if coreCmsPicture.deleted %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedat</th>
+                <td>{% if coreCmsPicture.deletedAt %}{{ coreCmsPicture.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if coreCmsPicture.createdAt %}{{ coreCmsPicture.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if coreCmsPicture.updatedAt %}{{ coreCmsPicture.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Alt</th>
+                <td>{{ coreCmsPicture.alt }}</td>
+            </tr>
+            <tr>
+                <th>Extension</th>
+                <td>{{ coreCmsPicture.extension }}</td>
+            </tr>
+            <tr>
+                <th>Webpath</th>
+                <td>{{ coreCmsPicture.webpath }}</td>
+            </tr>
+            <tr>
+                <th>Randomkey</th>
+                <td>{{ coreCmsPicture.randomKey }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('Picture_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('Picture_edit', { 'uid': coreCmsPicture.uid }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

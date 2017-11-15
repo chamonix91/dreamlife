@@ -1,0 +1,16 @@
+earned_service:
+    path:     /earned
+    defaults: { _controller: "DLGlobalBundle:Earn:EarnedUser" }
+    methods:  GET
+tree_service:
+    path:     /f/{neud_id}
+    defaults: { _controller: "DLGlobalBundle:Tree:getTreeById" }
+    methods:  GET
+tree_view:
+    path:     /arbo/{neud_id}
+    defaults: { _controller: "DLGlobalBundle:Tree:Treebyid" }
+    methods:  GET
+earn_view:
+    path:     /earn/{neud_id}
+    defaults: { _controller: "DLGlobalBundle:Tree:getearn" }
+    methods:  GET

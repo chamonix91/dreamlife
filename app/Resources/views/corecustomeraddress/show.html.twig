@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Corecustomeraddress</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Uid</th>
+                <td>{{ coreCustomerAddress.uid }}</td>
+            </tr>
+            <tr>
+                <th>Deleted</th>
+                <td>{% if coreCustomerAddress.deleted %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedat</th>
+                <td>{% if coreCustomerAddress.deletedAt %}{{ coreCustomerAddress.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if coreCustomerAddress.createdAt %}{{ coreCustomerAddress.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if coreCustomerAddress.updatedAt %}{{ coreCustomerAddress.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td>{{ coreCustomerAddress.street }}</td>
+            </tr>
+            <tr>
+                <th>Complement</th>
+                <td>{{ coreCustomerAddress.complement }}</td>
+            </tr>
+            <tr>
+                <th>Postalcode</th>
+                <td>{{ coreCustomerAddress.postalCode }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ coreCustomerAddress.city }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ coreCustomerAddress.region }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ coreCustomerAddress.country }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('address_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('address_edit', { 'uid': coreCustomerAddress.uid }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

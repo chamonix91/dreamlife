@@ -1,0 +1,12 @@
+{% for p in actives %}
+
+    {{ p.cin }}<br>
+    {{ p.lastName }}<br>
+    {{ p.firstName }}<br>
+    {{ p.createdAt|date ('Y,m,D') }}<br>
+
+
+<p>-------------------------------------</p>
+
+
+{% endfor %}
